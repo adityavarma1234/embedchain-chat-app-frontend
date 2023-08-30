@@ -33,6 +33,7 @@ const FileUpload = ({ onFileUpload }) => {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
+        withCredentials: true,
       });
 
       if (response.status === 200) {

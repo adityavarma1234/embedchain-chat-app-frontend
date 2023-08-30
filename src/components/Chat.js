@@ -15,7 +15,7 @@ const Chat = () => {
 
     // Send user input to the backend
     try {
-      const response = await axios.post('/api/chat', { user_input: userInput });
+      const response = await axios.post('/api/chat', { user_input: userInput }, {withCredentials: true,});
       const botResponse = response.data.bot_response;
       
       // Add the user's message and bot's response to the chat history
